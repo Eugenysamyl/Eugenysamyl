@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota 2 - Герои</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/dota-logo.png" alt="Dota 2 Logo">
+                <h1>DOTA 2</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="heroes.html" class="active"><i class="fas fa-user-ninja"></i> Герои</a></li>
+                    <li><a href="items.html"><i class="fas fa-gem"></i> Предметы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <!-- Заголовок страницы -->
+        <section class="page-header">
+            <div class="container">
+                <h2>Герои Dota 2</h2>
+                <p>Выберите своего чемпиона и отправляйтесь на поле боя</p>
+            </div>
+        </section>
+
+        <!-- Основной контент -->
+        <section class="main-content">
+            <div class="container">
+                <div class="content-row">
+                    <div class="content-text">
+                        <h2>Многообразие героев</h2>
+                        <p>В Dota 2 представлено более 120 уникальных героев, каждый со своими способностями, стилем игры и ролью в команде. Все герои делятся на три основных атрибута: Сила, Ловкость и Интеллект.</p>
+                        <p>Правильный выбор героя под ситуацию и состав команды — ключевой элемент успеха в Dota 2.</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="img/heroes.jpg" alt="Dota 2 Heroes">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карточки героев -->
+        <section class="heroes">
+            <div class="container">
+                <h2>Популярные герои</h2>
+                <div class="heroes-grid">
+                    <div class="hero-card">
+                        <div class="hero-image">
+                            <img src="img/hero1.jpg" alt="Pudge">
+                        </div>
+                        <div class="hero-info">
+                            <h3>Pudge</h3>
+                            <div class="hero-attribute strength">
+                                <i class="fas fa-fist-raised"></i> Сила
+                            </div>
+                            <p>Герой ближнего боя с мощными способностями контроля. Его знаменитый крюк может изменить ход любого боя.</p>
+                            <div class="hero-role">
+                                <span class="role-tag">Инициатор</span>
+                                <span class="role-tag">Диспейлер</span>
+                                <span class="role-tag">Танк</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-image">
+                            <img src="img/hero2.jpg" alt="Invoker">
+                        </div>
+                        <div class="hero-info">
+                            <h3>Invoker</h3>
+                            <div class="hero-attribute intelligence">
+                                <i class="fas fa-brain"></i> Интеллект
+                            </div>
+                            <p>Самый сложный герой в игре с 10 различными заклинаниями. Мастер элементов, способный на все.</p>
+                            <div class="hero-role">
+                                <span class="role-tag">Нукер</span>
+                                <span class="role-tag">Контроллер</span>
+                                <span class="role-tag">Пушер</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-image">
+                            <img src="img/hero3.jpg" alt="Anti-Mage">
+                        </div>
+                        <div class="hero-info">
+                            <h3>Anti-Mage</h3>
+                            <div class="hero-attribute agility">
+                                <i class="fas fa-bolt"></i> Ловкость
+                            </div>
+                            <p>Идеальный керри с быстрой фармой и способностью противостоять магам. Позднеигровой монстр.</p>
+                            <div class="hero-role">
+                                <span class="role-tag">Керри</span>
+                                <span class="role-tag">Эскейпер</span>
+                                <span class="role-tag">Пушер</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Атрибуты героев -->
+        <section class="attributes">
+            <div class="container">
+                <h2>Атрибуты героев</h2>
+                <div class="attributes-grid">
+                    <div class="attribute-card strength">
+                        <h3><i class="fas fa-fist-raised"></i> Сила</h3>
+                        <p>Дает дополнительное здоровье и регенерацию здоровья. Герои силы обычно являются танками или инициаторами.</p>
+                        <ul>
+                            <li>Axe</li>
+                            <li>Tidehunter</li>
+                            <li>Bristleback</li>
+                            <li>Centaur Warrunner</li>
+                        </ul>
+                    </div>
+                    <div class="attribute-card agility">
+                        <h3><i class="fas fa-bolt"></i> Ловкость</h3>
+                        <p>Увеличивает скорость атаки и броню. Герои ловкости обычно являются керри или полу-керри.</p>
+                        <ul>
+                            <li>Phantom Assassin</li>
+                            <li>Juggernaut</li>
+                            <li>Terrorblade</li>
+                            <li>Mirana</li>
+                        </ul>
+                    </div>
+                    <div class="attribute-card intelligence">
+                        <h3><i class="fas fa-brain"></i> Интеллект</h3>
+                        <p>Дает дополнительную ману и регенерацию маны. Герои интеллекта обычно являются поддержкой или нукерами.</p>
+                        <ul>
+                            <li>Crystal Maiden</li>
+                            <li>Zeus</li>
+                            <li>Lina</li>
+                            <li>Storm Spirit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/dota-logo.png" alt="Dota 2 Logo">
+                    <span>DOTA 2</span>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="heroes.html">Герои</a></li>
+                        <li><a href="items.html">Предметы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2023 Dota 2 Fan Site. Все права защищены.</p>
+                    <p>Этот сайт создан для образовательных целей и не является официальным сайтом Dota 2.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

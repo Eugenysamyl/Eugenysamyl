@@ -1,0 +1,804 @@
+/* Сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #0a0e17;
+    background-image: linear-gradient(to bottom, #0a0e17, #121828);
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта */
+header {
+    background-color: rgba(10, 14, 23, 0.95);
+    border-bottom: 2px solid #2a3b5c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(90deg, #d32f2f, #ff9800);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(255, 152, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: #b0b8d0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(42, 59, 92, 0.5);
+}
+
+nav a.active {
+    color: #ff9800;
+    background-color: rgba(255, 152, 0, 0.1);
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+/* Основное содержимое */
+main {
+    padding-bottom: 60px;
+}
+
+/* Геройский баннер */
+.hero-banner {
+    background: linear-gradient(rgba(10, 14, 23, 0.8), rgba(10, 14, 23, 0.9)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(10, 14, 23, 0.9) 70%);
+}
+
+.hero-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-banner h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 152, 0, 0.7);
+}
+
+.hero-banner p {
+    font-size: 1.3rem;
+    color: #b0b8d0;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #d32f2f, #ff9800);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.5);
+}
+
+/* Заголовок страницы */
+.page-header {
+    background: linear-gradient(90deg, rgba(42, 59, 92, 0.8), rgba(211, 47, 47, 0.8));
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    color: #e0e4f0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Основной контент */
+.main-content {
+    padding: 60px 0;
+}
+
+.main-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.content-text {
+    flex: 1;
+}
+
+.content-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d8f0;
+}
+
+.content-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.content-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Фракции */
+.factions {
+    padding: 80px 0;
+    background-color: rgba(18, 24, 40, 0.7);
+}
+
+.factions h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.factions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.faction-card {
+    background: linear-gradient(145deg, rgba(30, 40, 65, 0.8), rgba(15, 20, 35, 0.9));
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid;
+}
+
+.faction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.faction-card.radiant {
+    border-color: #4CAF50;
+}
+
+.faction-card.dire {
+    border-color: #d32f2f;
+}
+
+.faction-icon {
+    margin-bottom: 20px;
+}
+
+.faction-icon img {
+    height: 80px;
+    width: auto;
+}
+
+.faction-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.faction-card p {
+    color: #b0b8d0;
+    line-height: 1.7;
+}
+
+/* Особенности игры */
+.features {
+    padding: 80px 0;
+}
+
+.features h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(30, 40, 65, 0.6);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 152, 0, 0.2);
+}
+
+.feature-card:hover {
+    background: rgba(42, 59, 92, 0.8);
+    border-color: rgba(255, 152, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: #ff9800;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #b0b8d0;
+    line-height: 1.6;
+}
+
+/* Герои */
+.heroes {
+    padding: 80px 0;
+    background-color: rgba(18, 24, 40, 0.7);
+}
+
+.heroes h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.hero-card {
+    background: linear-gradient(145deg, rgba(30, 40, 65, 0.8), rgba(15, 20, 35, 0.9));
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-10px);
+}
+
+.hero-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-card:hover .hero-image img {
+    transform: scale(1.05);
+}
+
+.hero-info {
+    padding: 25px;
+}
+
+.hero-info h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-attribute {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.hero-attribute.strength {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.4);
+}
+
+.hero-attribute.agility {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.4);
+}
+
+.hero-attribute.intelligence {
+    background-color: rgba(33, 150, 243, 0.2);
+    color: #2196F3;
+    border: 1px solid rgba(33, 150, 243, 0.4);
+}
+
+.hero-info p {
+    color: #b0b8d0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero-role {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.role-tag {
+    background-color: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+/* Атрибуты героев */
+.attributes {
+    padding: 80px 0;
+}
+
+.attributes h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.attribute-card {
+    background: linear-gradient(145deg, rgba(30, 40, 65, 0.8), rgba(15, 20, 35, 0.9));
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    border-top: 5px solid;
+}
+
+.attribute-card:hover {
+    transform: translateY(-10px);
+}
+
+.attribute-card.strength {
+    border-color: #f44336;
+}
+
+.attribute-card.agility {
+    border-color: #4CAF50;
+}
+
+.attribute-card.intelligence {
+    border-color: #2196F3;
+}
+
+.attribute-card h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attribute-card h3 i {
+    font-size: 1.5rem;
+}
+
+.attribute-card p {
+    color: #b0b8d0;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.attribute-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.attribute-card li {
+    color: #d0d8f0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attribute-card li:last-child {
+    border-bottom: none;
+}
+
+/* Предметы */
+.items {
+    padding: 80px 0;
+    background-color: rgba(18, 24, 40, 0.7);
+}
+
+.items h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.item-card {
+    background: linear-gradient(145deg, rgba(30, 40, 65, 0.8), rgba(15, 20, 35, 0.9));
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-10px);
+}
+
+.item-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.item-card:hover .item-image img {
+    transform: scale(1.05);
+}
+
+.item-info {
+    padding: 25px;
+}
+
+.item-info h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.item-cost {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #FFC107;
+    border: 1px solid rgba(255, 193, 7, 0.4);
+}
+
+.item-info p {
+    color: #b0b8d0;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.item-attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item-attribute {
+    background-color: rgba(156, 39, 176, 0.2);
+    color: #9C27B0;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+/* Категории предметов */
+.item-categories {
+    padding: 80px 0;
+}
+
+.item-categories h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-card {
+    background: rgba(30, 40, 65, 0.6);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(156, 39, 176, 0.2);
+}
+
+.category-card:hover {
+    background: rgba(42, 59, 92, 0.8);
+    border-color: rgba(156, 39, 176, 0.5);
+    transform: translateY(-5px);
+}
+
+.category-card i {
+    font-size: 3rem;
+    color: #9C27B0;
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    color: #b0b8d0;
+    line-height: 1.6;
+}
+
+/* Подвал */
+footer {
+    background-color: #0a0e17;
+    border-top: 2px solid #2a3b5c;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #ff9800;
+}
+
+.footer-links h4 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #b0b8d0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff9800;
+}
+
+.footer-info p {
+    color: #8a94b0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .content-row {
+        flex-direction: column;
+    }
+    
+    .hero-banner h2 {
+        font-size: 2.8rem;
+    }
+    
+    .page-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero-banner h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-banner p {
+        font-size: 1.1rem;
+    }
+    
+    .main-content h2,
+    .factions h2,
+    .features h2,
+    .heroes h2,
+    .attributes h2,
+    .items h2,
+    .item-categories h2 {
+        font-size: 2rem;
+    }
+    
+    .page-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-banner h2 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .factions-grid,
+    .features-grid,
+    .heroes-grid,
+    .attributes-grid,
+    .items-grid,
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
